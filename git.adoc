@@ -6,6 +6,11 @@ $ git config --global user.name “nombre de usuario”
 $ git config --global user.email usuario@tu.correo
 $ git config --list
 ----
+* Inicializar repositorio
+----
+$ mkdir repo ; cd repo
+$ git init .
+----
 * Revisar el estatus del repositorio
 ----
 $ git status
