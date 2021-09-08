@@ -1,0 +1,32 @@
+== Comandos de Ansible
+
+=== Comandos _ad-hoc_
+
+* Verificar la conexión de todos los nodos
+----
+$ ansible all -m ping
+----
+* Administrar archivos
+----
+$ ansible all -m ansible.builtin.copy -a "src=myfile dest=/tmp/myfile
+----
+* Reiniciar los nodos
+----
+$ ansible all -a "/sbin/reboot"
+----
+* Administrar paquetes
+----
+$ ansible all -m ansible.builtin.yum -a "name=mlocate state=present"
+----
+* Administrar usuarios y grupos
+----
+$ ansible servers -m ansible.builtin.user -a "name=devel password=<contraseña>"
+----
+* Administrar servicios
+----
+$ ansible servers -m ansible.builtin.service -a "name=httpd state=restarted"
+----
+* Obtener pass:[<i>_facts_</i>] (variables descubiertas en un sistema)
+----
+$ ansible all -m ansible.builtin.setup
+----
