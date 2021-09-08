@@ -1,0 +1,73 @@
+== Comandos de Git
+
+* Configuración usuario
+----
+$ git config --global user.name “nombre de usuario”
+$ git config --global user.email usuario@tu.correo
+$ git config --list
+----
+* Revisar el estatus del repositorio
+----
+$ git status
+----
+* Agregar archivo al área de staging
+----
+$ git add file
+----
+* Confirmar el archivo preparado (staged)
+----
+$ git commit -m “Comentario descriptivo y conciso de las actividades realizadas”
+----
+* Renombrar el branch como main
+----
+$ git branch -M main
+----
+* Revisar diferencias
+----
+$ git diff
+----
+* Agregar todos los archivos al área de staging
+----
+$ git add .
+----
+* Inspeccionar el historial de confirmaciones
+----
+$ git log
+----
+* Crear branch
+----
+$ git branch usuario/nuevo_branch
+$ git checkout -b usuario/nuevo_branch
+----
+* Regresar a la rama principal
+----
+$ git checkout main
+----
+* Fusionar rama
+----
+$ git merge usuario/nuevo_branch
+----
+* Verificar repositorios remotos
+----
+$ git remote -v
+----
+* Agregar repositorio remoto
+----
+$ git remote add origin https://github.com/usuario/repo.git
+----
+* Establecer el repositorio remoto como upstream
+----
+$ git push --set-upstream origin main
+----
+* Clonar el repositorio remoto
+----
+$ git clone https://github.com/usuario/repo.git
+----
+* Enviar la rama al repositorio remoto
+----
+$ git push -u origin usuario/nuevo_branch
+----
+
+
+
+
